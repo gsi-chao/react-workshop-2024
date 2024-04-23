@@ -15,3 +15,9 @@ export type PlacesResponse = {
   list: Places[];
   message: string;
 };
+
+export type Forecast = {
+  time: string;
+  icon: string;
+  temp: number;
+};

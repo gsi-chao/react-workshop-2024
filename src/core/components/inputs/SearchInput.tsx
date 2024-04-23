@@ -12,11 +12,11 @@ const SearchInput: React.FC<Props> = ({ onChange, value, onSearch }) => {
     onChange(event.target.value);
   };
   return (
-    <div className="flex justify-center items-center h-10">
+    <div className="flex justify-center items-center h-10 max-w-40 md:max-w-full">
       <input
         value={value}
         onChange={onHandleChange}
-        className="px-4 py-2 border-gray-300 border rounded-l-md h-10 focus:rounded-none"
+        className="px-4 py-2 border-gray-300 border rounded-l-md h-10 focus:rounded-none max-w-28 md:max-w-full"
       />
       <button
         className="px-4 py-2 bg-blue-500 text-white rounded-r-md h-10"
