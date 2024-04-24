@@ -1,7 +1,7 @@
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/24/solid";
 
 import { cn } from "../../core/utils/class";
-import WeatherCelciusFormat from "./WeatherCelciusFormat";
+import WeatherKelvinFormat from "./WeatherKelvinFormat";
 
 type Props = {
   min: number;
@@ -21,14 +21,14 @@ const WeatherMinMaxTemperature: React.FC<Props> = ({
   return (
     <div className="flex space-x-2 justify-between">
       <div className="flex items-center">
-        <WeatherCelciusFormat
+        <WeatherKelvinFormat
           className={cn(className, minClassName)}
           temp={min}
         />
         <ArrowDownIcon className="h-3 w-3" />
       </div>
       <div className="flex items-center">
-        <WeatherCelciusFormat
+        <WeatherKelvinFormat
           className={cn(className, maxClassName)}
           temp={max}
         />

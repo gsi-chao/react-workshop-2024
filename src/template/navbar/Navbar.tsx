@@ -1,15 +1,19 @@
 import React from "react";
 import SearchInput from "../../core/components/inputs/SearchInput";
 import { findPlaces } from "../../core/services/WeatherForecast";
+import useWeatherContext from "../../stores/weather/hook";
 import NavbarTitle from "./NavbarTitle";
 
 export default function Navbar() {
   const [search, setSearch] = React.useState("");
+  const { dispatch } = useWeatherContext();
 
   const findPlacesAsync = async () => {
     try {
       const data = await findPlaces(search);
-      console.log(data);
+      if (data.list.length > 0) {
+        dispatch({ type: "SET_PLACE", payload: data.list[0] });
+      }
     } catch (e) {
       console.error(e);
     }

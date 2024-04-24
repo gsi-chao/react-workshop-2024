@@ -1,4 +1,4 @@
-import WeatherCelciusFormat from "../WeatherCelciusFormat";
+import WeatherKelvinFormat from "../WeatherKelvinFormat";
 
 type Props = {
   time: string;
@@ -11,7 +11,7 @@ const ForecastItem: React.FC<Props> = ({ icon, time, temp }) => {
     <div className="flex flex-col items-center justify-between gap-2 text-xs font-semibold">
       <span>{time}</span>
       {icon}
-      <WeatherCelciusFormat temp={temp} className="" />
+      <WeatherKelvinFormat temp={temp} className="" />
     </div>
   );
 };

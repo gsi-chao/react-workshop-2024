@@ -1,4 +1,4 @@
-import WeatherCelciusFormat from "./WeatherCelciusFormat";
+import WeatherKelvinFormat from "./WeatherKelvinFormat";
 import WeatherMinMaxTemperature from "./WeatherMinMaxTemperature";
 
 type Props = {
@@ -16,10 +16,10 @@ const WeatherTemperatureInfo: React.FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col justify-center items-center px-2">
-      <WeatherCelciusFormat temp={temp} className="text-5xl" />
+      <WeatherKelvinFormat temp={temp} className="text-5xl" />
       <div className="flex gap-1">
         <span className="text-xs">Feels like</span>
-        <WeatherCelciusFormat temp={feelsLike} className="text-xs" />
+        <WeatherKelvinFormat temp={feelsLike} className="text-xs" />
       </div>
       <WeatherMinMaxTemperature min={minTemp} max={maxTemp} className="text-xs"/>
     </div>

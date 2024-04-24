@@ -1,13 +1,10 @@
-import WeatherCardContainer from "./components/card/WeatherCardContainer";
-import WeatherToday from "./components/weather/WeatherToday";
+import WeatherContainer from "./components/weather/WeatherContainer";
 import RootLayout from "./template/Layout";
 
 function App() {
   return (
     <RootLayout>
-      <WeatherCardContainer>
-        <WeatherToday />
-      </WeatherCardContainer>
+      <WeatherContainer />
     </RootLayout>
   );
 }
