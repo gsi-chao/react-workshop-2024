@@ -1,12 +1,10 @@
-import WeatherContainer from "./components/weather/WeatherContainer";
-import RootLayout from "./template/Layout";
+import { RouterProvider } from "react-router-dom";
+import router from './core/router/router';
+
+
 
 function App() {
-  return (
-    <RootLayout>
-      <WeatherContainer />
-    </RootLayout>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
